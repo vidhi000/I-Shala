@@ -7,7 +7,7 @@ import Head from 'next/head'
 function MyApp({ Component, pageProps }) {
   return (<>
       <Head>
-        <link rel="shortcut icon" href='https://www.logoheroes.net/uploads/logo/2017/07/rocket-logo-exploration.jpg' />
+        <link rel="shortcut icon" href='https://upvotes.co/images/SoftwareLogos/Social-Pilot.png' />
       </Head>
     <Navbar />
     <Component {...pageProps} />

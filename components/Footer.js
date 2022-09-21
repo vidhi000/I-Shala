@@ -65,7 +65,7 @@ function Footer() {
 
                     </div> */}
 
-          <div className="bg-gray-800 justify-center items-center flex flex-grow space-x-2 col-span-2">
+          <div className="bg-gray-800 justify-center items-center flex flex-grow space-x-2 col-span-2 shadow-transparent">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"
               height={30} width={40} className="p-2 hover:cursor-pointer"
             />

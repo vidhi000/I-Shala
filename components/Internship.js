@@ -1,13 +1,18 @@
-import { CalendarIcon, ChevronRightIcon, ClockIcon, CurrencyRupeeIcon, HomeIcon, LocationMarkerIcon, MapIcon, PlayIcon } from '@heroicons/react/outline'
+import { CalendarIcon, ChevronRightIcon, ClockIcon, CurrencyRupeeIcon, HomeIcon, LocationMarkerIcon, MapIcon, PlayIcon, TrendingUpIcon } from '@heroicons/react/outline'
+import Link from 'next/link';
 
 
 const Internship = () => {
     return (
 
         <div className="bg-white p-5 w-full space-y-5 border rounded-md shadow-lg">
-            <div>
+            <div className='border rounded-md inline-flex'>
+                <TrendingUpIcon className='h-5 w-5 text-sky-600' />
+                <p className='text-gray-800  text-sm inline p-1'>Actively hiring</p>
+            </div>
+            <div className='space-y-1'>
                 <p className="text-gray-900 font-semibold text-xl cursor-pointer">Web Development</p>
-                <p className="text-gray-500 font-semibold">sp</p>
+                <p className="text-gray-500 font-semibold cursor-pointer">sp</p>
             </div>
             <div className="flex space-x-1">
                 <HomeIcon className='h-5 w-5 text-gray-500' />
@@ -47,10 +52,12 @@ const Internship = () => {
                 <ClockIcon className='h-5 w-5 text-green-700' />
                 <p className='text-green-700'>Just now</p>
                 </div>
-                <p className='bg-gray-200 border rounded-md text-gray-700'>Internship</p>
-                <p className='bg-gray-200 border rounded-md text-gray-700'>Internship with job offer</p>
+                <p className='bg-gray-200 border rounded-md text-gray-700 p-1'>Internship</p>
+                <p className='bg-gray-200 border rounded-md text-gray-700 p-1'>Internship with job offer</p>
                  <div className='flex text-sky-500 hover:text-sky-600 cursor-pointer'>
-                   <p className='font-semibold text-right ml-8'>View details</p>
+                    <Link href="/internship_details">
+                   <p className='font-semibold text-right ml-44'>View details</p>
+                   </Link>
                    <ChevronRightIcon className='h-5 w-5 '/>
                  </div>
               

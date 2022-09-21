@@ -16,12 +16,12 @@ const internships = () => {
                     </div>
                     <div className="space-y-2">
                         <label className="text-gray-600 font-semibold">Category</label>
-                        <input type='category' placeholder="e.g. Web Developer" className="p-[6px] border rounded-sm border-gray-300 hover:border-sky-500  w-full" />
+                        <input type='category' placeholder="e.g. Web Developer" className="outline-none p-[6px] border rounded-sm border-gray-300 hover:border-sky-500  w-full" />
                     </div>
 
                     <div className="space-y-2">
                         <label className="text-gray-600 font-semibold">Location</label>
-                        <input type='Location' placeholder="e.g. Ahemdabad" className="p-[6px] border rounded-sm border-gray-300 hover:border-sky-500  w-full" />
+                        <input type='Location' placeholder="e.g. Ahemdabad" className="outline-none p-[6px] border rounded-sm border-gray-300 hover:border-sky-500  w-full" />
                     </div>
                     <div className="space-y-1">
                         <div className="space-x-1">
@@ -46,7 +46,7 @@ const internships = () => {
                             <span>10k</span>
                         </div>
                     </div>
-                    <p className="text-blue-500 font-semibold text-right cursor-pointer">Clear all</p>
+                    <p className="text-sky-500 hover:text-sky-600 font-semibold text-right cursor-pointer">Clear all</p>
                 </div>
                 <section className="ml-10 space-y-5">
                     {

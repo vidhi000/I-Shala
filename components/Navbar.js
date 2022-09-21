@@ -11,8 +11,12 @@ const Navbar = () => {
                </Link>      
          </div>
          <div className="flex flex-grow justify-end items-center space-x-10">
+            <Link href="/internships">
             <p className="font-semibold cursor-pointer text-gray-500 hover:text-sky-500">Internships</p>
+            </Link>
+            <Link href='/login'>
             <button className="border px-5 py-2 border-sky-700 rounded-sm font-semibold text-sky-600 hover:shadow-md hover:text-sky-700">Login</button>
+            </Link>
             <Link href={'/auth'}>
             <button className="px-5 py-2 bg-sky-500 hover:bg-sky-600 font-semibold text-white rounded-sm p-5">Register</button>
             </Link>

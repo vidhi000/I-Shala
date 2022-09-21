@@ -4,9 +4,7 @@ const Auth = () => {
     const [loginSignup, setLoginSignup] = useState(true);
     return (
         <>
-        <title>
-            Register/Login
-        </title>
+       
             <div className="min-h-screen relative bg-[url('/public/inter.PNG')] "
                 style={{ backgroundImage: "url('https://internshala.com/static/images/registration/student/background-1920.png')", backgroundRepeat: "no-repeat" }}
             >
@@ -14,17 +12,17 @@ const Auth = () => {
 
                 <div className="max-w-screen-2xl mx-auto p-10 flex justify-around">
                     <div>
-                        <p className="font-bold text-4xl flex ">A
+                        <p className="font-bold text-4xl flex text-gray-700">A
                             <img src="https://internshala.com/static/images/registration/student/brush_stroke.svg" />
                             ride to your dream career</p>
                         <div className="justify-between space-y-3 text-4xl">
-                            <p className="font-semibold text-2xl p-4">Register and apply to 10000+ opportunities</p>
+                            <p className="font-semibold text-2xl p-4 text-gray-700">Register and apply to 10000+ opportunities</p>
 
-                            <p className="flex font-semibold text-2xl">
+                            <p className="flex font-semibold text-2xl text-gray-700">
                                 <img src="https://internshala.com/static/images/common/check_box.svg" />
                                 Internships
                             </p>
-                            <p className="flex font-semibold text-2xl">
+                            <p className="flex font-semibold text-2xl text-gray-700">
                                 <img src="https://internshala.com/static/images/common/check_box.svg" />
                                 Work from home Internships
                             </p>
@@ -68,7 +66,7 @@ const Auth = () => {
                         <button className="bg-sky-500 text-xl font-semibold text-white border rounded-sm  cursor-pointer w-full p-2 hover:bg-sky-600 shadow-lg">Sign up</button>
                     </div>
                     <div className="flex justify-center">
-                        <p>Already registered?<span className="p-2 font-semibold text-sky-500 cursor-pointer hover:text-sky-600" onClick={()=>setLoginSignup(false)}>Login</span></p>
+                        <p>Already registered?<span className="p-2 font-semibold text-sky-500 cursor-pointer hover:text-sky-600  bg-gray-50" onClick={()=>setLoginSignup(false)}>Login</span></p>
                     </div>
                 </div>
                     
@@ -94,7 +92,7 @@ const Auth = () => {
                         <p className="text-sm font-semibold cursor-pointer text-sky-500 hover:text-sky-600">Forgot password?</p>
 
                         <button className="bg-sky-500 text-xl font-semibold text-white border rounded-sm  cursor-pointer w-full p-2 hover:bg-sky-600 shadow-lg">Login</button>
-                        <p>New to Internshala?<span className="p-2 font-semibold text-sky-500 hover:text-sky-600 cursor-pointer" onClick={()=>setLoginSignup(true)}>Register</span></p>
+                        <p>New to Internshala?<span className="p-2 font-semibold text-sky-500 hover:text-sky-600 cursor-pointer bg-gray-50" onClick={()=>setLoginSignup(true)}>Register</span></p>
 
                     </div> 
 
