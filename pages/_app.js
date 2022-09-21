@@ -2,13 +2,13 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import '../styles/globals.css'
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
   return (<>
-  <title>
-    {/* <img src="https://internshala.com/static/images/common/new_internshala_logo.svg " /> */}
-    I-Shala
-  </title>
+      <Head>
+        <link rel="shortcut icon" href='https://www.logoheroes.net/uploads/logo/2017/07/rocket-logo-exploration.jpg' />
+      </Head>
     <Navbar />
     <Component {...pageProps} />
     <Footer />
