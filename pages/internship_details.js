@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
     CalendarIcon, ChevronRightIcon, ClipboardCheckIcon, ClockIcon, CurrencyRupeeIcon, HomeIcon, LocationMarkerIcon,
     PlayIcon, TrendingUpIcon, UserGroupIcon, UsersIcon
@@ -149,8 +150,13 @@ const internship_details = () => {
                             <p>200</p>
                         </div>
 
-                        <p className='bg-sky-400 text-white font-semibold border rounded-md p-3 w-32 text-lg cursor-pointer hover:bg-sky-500 shadow-lg text-center mx-auto'>Apply now</p>
-
+                        {/* <p className='bg-sky-400 text-white font-semibold border rounded-md p-3 w-32 text-lg cursor-pointer hover:bg-sky-500 shadow-lg text-center mx-auto'>Apply now</p> */}
+                         <div className='flex items-center justify-center'>
+                            <Link href='/resume'>
+                             <button className='bg-sky-400 text-white font-semibold border rounded-md p-3 w-32 text-lg 
+                             cursor-pointer hover:bg-sky-500 shadow-lg text-center mx-auto'>Apply now</button>
+                            </Link>
+                            </div> 
 
 
 

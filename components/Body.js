@@ -116,7 +116,7 @@ const Body = () => {
     return (
         <>
             <div className="m-10">
-                <div className="flex items-center space-x-3"> <h1 className="font-semibold text-black text-4xl">I-Shala Internships</h1>
+                <div className="flex items-center space-x-3"> <h1 className="font-semibold text-gray-800 text-4xl">I-Shala Internships</h1>
                     <img src="https://internshala.com/cached_uploads/offer_tags/63198abd9fafd1662618301.png" width={90} height={8}
                         className="py-10 cursor-pointer" />
 

@@ -84,7 +84,7 @@ const add = () => {
                     <input type='text' placeholder="Enter Duration" className="shadow-md p-[6px] outline-none border rounded-md border-gray-300 hover:border-sky-600 w-96 " />
                 </div>
                    <div className="flex items-center justify-center mt-12">
-                   <button className="text-white bg-sky-600 border rounded-md px-6 p-2 justify-center">Create Internship</button>
+                   <button className="text-white bg-sky-500 hover:bg-sky-600 border rounded-md px-6 p-2 justify-center shadow-lg">Create Internship</button>
                    </div>
                 
                 </div>
