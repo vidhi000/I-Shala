@@ -12,10 +12,10 @@ const internship_details = () => {
             </div>
             <div>
 
-                <div className="max-w-screen-lg min-h-screen border rounded-sm mx-auto">
+                <div className="max-w-screen-lg min-h-screen border rounded-lg mx-auto mb-12">
                     {/* <Internship/> */}
 
-                    <div className="bg-white p-5 w-full space-y-5 shadow-lg">
+                    <div className="bg-white p-5 w-full space-y-5 ">
                         <div className='border rounded-md inline-flex'>
                             <TrendingUpIcon className='h-5 w-5 text-sky-600' />
                             <p className='text-gray-800  text-sm inline p-1'>Actively hiring</p>
@@ -109,7 +109,7 @@ const internship_details = () => {
                             <p className='text-gray-600 font-semibold'>Selected intern's day-to-day responsibilities include:</p>
                         </div>
                         <div className='text-gray-600 font-normal'>
-                           
+
                             <p>1. Creating fundraising campaigns</p>
                             <p>2. Formalizing growth strategy</p>
                             <p>3. Working on the execution of various strategies</p>
@@ -126,14 +126,32 @@ const internship_details = () => {
                             <p>4. have relevant skills and interests</p>
                         </div>
 
-                        <div>
+                        <div className='space-y-1'>
                             <p className='text-xl text-gray-800 font-semibold'>
                                 Perks
                             </p>
-                            <p>Certificate</p>
-                            <p>Letter of recommendation</p>
-                            <p>Flexible work hours</p>
+                            <div className='flex space-x-10 text-gray-700'>
+                                <p className='border rounded-md bg-gray-100 p-1 outline-none'>Certificate</p>
+                                <p className='border rounded-md bg-gray-100 p-1'>Letter of recommendation</p>
+                                <p className='border rounded-md bg-gray-100 p-1'>Flexible work hours</p>
+                            </div>
+
                         </div>
+                        <div className='space-y-2'>
+                            <p className='text-xl text-gray-800 font-semibold'>Additional Information</p>
+                            <p className='text-gray-700'>Stipend structure: This is a performance-based internship. In addition to the minimum-assured stipend, you will also
+                                be paid a performance-linked incentive (10% of total funds raised).</p>
+                        </div>
+                        {/* <p className='text-gray-700'>Incentives shall be awarded to the intern based on the performance.</p> */}
+
+                        <div>
+                            <p className='text-xl text-gray-800 font-semibold'>Number of openings</p>
+                            <p>200</p>
+                        </div>
+
+                        <p className='bg-sky-400 text-white font-semibold border rounded-md p-3 w-32 text-lg cursor-pointer hover:bg-sky-500 shadow-lg text-center mx-auto'>Apply now</p>
+
+
 
 
                     </div>

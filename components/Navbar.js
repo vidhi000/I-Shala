@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -18,7 +17,14 @@ const Navbar = () => {
             <button className="border px-5 py-2 border-sky-700 rounded-sm font-semibold text-sky-600 hover:shadow-md hover:text-sky-700">Login</button>
             </Link>
             <Link href={'/auth'}>
-            <button className="px-5 py-2 bg-sky-500 hover:bg-sky-600 font-semibold text-white rounded-sm p-5">Register</button>
+            <button className="px-5 py-2 bg-sky-500 hover:bg-sky-600 font-semibold text-white rounded-sm p-5 hover:shadow-md">Register</button>
+            </Link>
+            <Link href='/add'>
+            <p className="text-white font-semibold cursor-pointer border rounded-sm w-32 p-2 text-center bg-sky-500 hover:bg-sky-600">Add</p>
+           </Link>
+
+           <Link href='/'>
+            <button className="border px-5 py-2 border-sky-700 rounded-sm font-semibold text-sky-600 hover:shadow-md hover:text-sky-700">Log out</button>
             </Link>
          </div>
       </nav>
