@@ -1,8 +1,22 @@
 // import {funnel} from  '@heroicons/react'
 
+import axios from "axios";
+import { useEffect, useState } from "react";
 import Internship from "../components/Internship";
 const data = Array(10).fill(1)
+
 const internships = () => {
+
+    const [intern, setIntern] = useState([]);
+
+    useEffect(()=>{
+        axios.get('http://localhost:5000/internship').then((res)=>{
+            setIntern(res.data);
+            console.log(res.data);
+        }).catch((ex)=>{
+            console.log(ex);
+        })
+    },[])
    
     return (
         <div className="bg-gray-50 min-h-screen ">
@@ -50,8 +64,8 @@ const internships = () => {
                 </div>
                 <section className="ml-10 space-y-5">
                     {
-                        data.map((i)=>(
-                            <Internship />
+                        intern.map((i,_j)=>(
+                            <Internship key={_j} i={i}/>
                         ))
                     }
                 </section>
