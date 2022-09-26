@@ -1,4 +1,4 @@
-import { CalendarIcon, ClipboardCheckIcon, ClockIcon, CurrencyRupeeIcon, HomeIcon, LocationMarkerIcon, PlayIcon, TrendingUpIcon, UserGroupIcon, UsersIcon } from '@heroicons/react/outline';
+import { BookmarkIcon, CalendarIcon, ClipboardCheckIcon, ClockIcon, CurrencyRupeeIcon, HomeIcon, LocationMarkerIcon, PlayIcon, TrendingUpIcon, UserGroupIcon, UsersIcon } from '@heroicons/react/outline';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
@@ -45,21 +45,21 @@ const Index = ({ internship }) => {
                         }
                         <div className="flex space-x-10 text-sm">
                             <div className='space-x-1 space-y-1 '>
-                                <div className='flex text-gray-400 space-x-1'>
+                                <div className='flex text-gray-500 space-x-1'>
                                     <PlayIcon className='h-5 w-5 ' />
                                     <p className='font-semibold text-sm'>START DATE</p>
                                 </div>
                                 <p className='text-gray-800 text-base'>{internship.start_date}</p>
                             </div>
                             <div className='space-x-1 space-y-1'>
-                                <div className='flex text-gray-400 space-x-1'>
+                                <div className='flex text-gray-500 space-x-1'>
                                     <CalendarIcon className='h-5 w-5' />
                                     <p className='font-semibold text-sm'>DURATION</p>
                                 </div>
                                 <p className='text-gray-800 text-base'>{internship.Duration}</p>
                             </div>
                             <div className='space-x-1 space-y-1'>
-                                <div className='flex text-gray-400 space-x-1'>
+                                <div className='flex text-gray-500 space-x-1'>
                                     <CurrencyRupeeIcon className='h-5 w-5 ' />
                                     <p className='font-semibold text-sm'>STIPEND</p>
                                 </div>
@@ -73,13 +73,17 @@ const Index = ({ internship }) => {
                                 <ClockIcon className='h-5 w-5 text-green-700' />
                                 <p className='text-green-700'>Just now</p>
                             </div>
-                            <p className='bg-gray-200 border rounded-md text-gray-700 p-1'>Internship</p>
-                            <p className='bg-gray-200 border rounded-md text-gray-700 p-1'>Internship with job offer</p>
+                            <p className='bg-gray-200 border rounded-md text-gray-700 p-1 font-semibold'>Internship</p>
+                            <p className='bg-gray-200 border rounded-md text-gray-700 p-1 font-semibold'>Internship with job offer</p>
                         </div>
                         <div className='flex text-gray-500 space-x-2'>
                             <UserGroupIcon className='h-5 w-5' />
                             <p>315 applicants</p>
+                        <div>
+                            <BookmarkIcon className='h-5 w-5 text-sky-600 cursor-pointer'/>
                         </div>
+                        </div>
+                        
 
                         <hr></hr>
 

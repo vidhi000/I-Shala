@@ -35,21 +35,21 @@ const internship_details = () => {
                         </div>
                         <div className="flex space-x-10 text-sm">
                             <div className='space-x-1 space-y-1 '>
-                                <div className='flex text-gray-400 space-x-1'>
+                                <div className='flex text-gray-500 space-x-1'>
                                     <PlayIcon className='h-5 w-5 ' />
                                     <p className='font-semibold text-sm'>START DATE</p>
                                 </div>
                                 <p className='text-gray-800 text-base'>Immediatly</p>
                             </div>
                             <div className='space-x-1 space-y-1'>
-                                <div className='flex text-gray-400 space-x-1'>
+                                <div className='flex text-gray-500 space-x-1'>
                                     <CalendarIcon className='h-5 w-5' />
                                     <p className='font-semibold text-sm'>DURATION</p>
                                 </div>
                                 <p className='text-gray-800 text-base'>6 months</p>
                             </div>
                             <div className='space-x-1 space-y-1'>
-                                <div className='flex text-gray-400 space-x-1'>
+                                <div className='flex text-gray-500 space-x-1'>
                                     <CurrencyRupeeIcon className='h-5 w-5 ' />
                                     <p className='font-semibold text-sm'>STIPEND</p>
                                 </div>
@@ -63,8 +63,8 @@ const internship_details = () => {
                                 <ClockIcon className='h-5 w-5 text-green-700' />
                                 <p className='text-green-700'>Just now</p>
                             </div>
-                            <p className='bg-gray-200 border rounded-md text-gray-700 p-1'>Internship</p>
-                            <p className='bg-gray-200 border rounded-md text-gray-700 p-1'>Internship with job offer</p>
+                            <p className='bg-gray-200 border rounded-md text-gray-700 p-1 font-semibold'>Internship</p>
+                            <p className='bg-gray-200 border rounded-md text-gray-700 p-1 font-semibold'>Internship with job offer</p>
                         </div>
                         <div className='flex text-gray-500 space-x-2'>
                             <UserGroupIcon className='h-5 w-5' />
