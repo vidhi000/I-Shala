@@ -42,13 +42,13 @@ const Add = () => {
         <div className="min-h-screen">
             <form className="p-7 bg-white" ref={formRef}>
                 <p className="text-gray-700 font-semibold text-2xl text-center mt-7 ">Add Internships</p>
-                <div className="max-w-6xl mx-auto border border-gray-200 rounded-md p-12 shadow-xl flex justify-evenly">
+                <div className="max-w-6xl mx-auto border border-gray-200 rounded-md p-12 shadow-xl flex justify-evenly mt-4">
 
                     {/* <div className="space-y-1">
                         <label className="block font-semibold ">Email</label>
                         <input type='email' placeholder="vidhi@example.com"  className="outline-none p-[6px] border rounded-sm border-gray-300 hover:border-sky-500  w-full" />
                     </div> */}
-                    <div>
+                    <div className="mt-4">
                         <div className="p-2">
                             <label className="text-gray-800 font-semibold text-lg block">Internship_Name</label>
                             <input type='text' ref={nameRef} placeholder="Enter internship name" className="shadow-md p-[6px] outline-none border rounded-md border-gray-300 hover:border-sky-600 w-96 " />
@@ -122,12 +122,14 @@ const Add = () => {
                             <label className="text-gray-900 font-semibold text-lg block">Islive</label>
                             <input type='text' ref={isLiveRef} placeholder="Enter Duration" className="shadow-md p-[6px] outline-none border rounded-md border-gray-300 hover:border-sky-600 w-96 " />
                         </div>
-                        <div className="flex items-center justify-center mt-12">
-                            <button onClick={createInternship} className="text-white bg-sky-500 hover:bg-sky-600 border rounded-md px-6 p-2 justify-center shadow-lg">Create Internship</button>
-                        </div>
+                       
 
                     </div>
                 </div>
+
+                <div className="flex justify-center mt-10 mb-10">
+                            <button onClick={createInternship} className="text-white bg-sky-500 hover:bg-sky-600 border rounded-md px-6 p-2 shadow-lg">Create Internship</button>
+                        </div>
             </form>
         </div>
     );

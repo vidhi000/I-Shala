@@ -1,5 +1,6 @@
 
 import { PencilIcon } from '@heroicons/react/outline';
+import Link from 'next/link';
 const resume = () => {
     return (
         <>
@@ -10,7 +11,9 @@ const resume = () => {
                         <p>
                             This is the resume that the employer will see, make sure it is up to date. You can add or edit details below.
                         </p>
+                        <Link href="/letter">
                         <button className="bg-sky-500 text-white shadow-lg hover:bg-sky-600 border rounded-md  w-60 font-semibold">Proceed to an Application</button>
+                        </Link>
                     </div>
                 </div>
                 <div className="justify-center flex mt-10">
