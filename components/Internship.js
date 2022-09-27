@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Internship = ({ i }) => {
     return (
 
-        <div className="bg-white p-5 w-full space-y-5 border rounded-md shadow-lg">
+        <div className="bg-white p-5 w-full space-y-5 border rounded-md shadow-lg ">
             <div className='border rounded-md inline-flex'>
                 <TrendingUpIcon className='h-5 w-5 text-sky-600' />
                 <p className='text-gray-800  text-sm inline p-1'>Actively hiring</p>

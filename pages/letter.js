@@ -1,10 +1,13 @@
+import axios from "axios";
+import Link from "next/link";
 const letter = () =>{
     return(
         <>
        <div className="min-h-screen mx-auto max-w-screen-lg">
-       <div>
-        <p className="text-gray-800 text-4xl font-semibold p-8">Internship at Ahemdabad</p>
-       </div>
+          
+       <div className='p-8 justify-center text-center text-4xl mt-0'>
+                <p className=' font-semibold text-gray-800'> Internship Confirmation</p>
+            </div>
        <hr></hr>
 
        <div>
@@ -45,10 +48,12 @@ const letter = () =>{
 
        <div>
         <p className="mt-4 text-gray-800 font-semibold">Q2. Name at least 10 keywords in Python that you use in your daily practices</p>
-        <textarea placeholder="Enter Text..." className="mt-4 text-gray-800 border rounded-md border-sky-500 hover:border-sky-600 h-44 w-[1000px] outline-none"></textarea>
+        <textarea placeholder="Enter Text..." className="mt-4 p-3 text-gray-800 border rounded-md border-sky-500 hover:border-sky-600 h-44 w-[1000px] outline-none"></textarea>
        </div>
         <div className="flex justify-center mt-4 mb-8">
+            <Link href="/submit">
         <button className="text-white bg-sky-500 hover:bg-sky-600 p-3 w-32 border rounded-md shadow-lg font-semibold text-lg">Submit</button>
+        </Link>
         </div>
        
 
@@ -64,3 +69,4 @@ const letter = () =>{
 }
 
 export default letter
+

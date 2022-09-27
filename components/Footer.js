@@ -70,7 +70,7 @@ function Footer() {
               height={30} width={40} className="p-2 hover:cursor-pointer"
             />
 
-            <img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png"
+            <img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" 
               height={30} width={40} className="p-2 hover:cursor-pointer"
             />
             <img src="https://ctl.s6img.com/society6/img/HIPy8HEc1R67PFZ5zABov-1SLSw/w_700/posters/top/~artwork,fw_2719,fh_3621,fx_-1,fy_449,iw_2720,ih_2720/s6-original-art-uploads/society6/uploads/misc/8e29a2e79387449caa28090d71f489e3/~~/github-logo-posters.jpg"
