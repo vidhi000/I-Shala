@@ -15,7 +15,7 @@ const Index = ({ internship }) => {
     return (
         <div>
             {/* {id} */}
-            <div className='max-w-screen-lg border-sky-500 rounded-md bg-gradient-to-l bg-sky-100 h-52 ml-[440px] mt-8'>
+            {/* <div className='max-w-screen-lg border-sky-500 rounded-md bg-gradient-to-l bg-sky-100 h-52 ml-[440px] mt-8'>
              <div className='flex'>
              <div className='space-y-5 p-5'>
                 <p className='text-gray-800 font-semibold text-lg'>Upskill yourself with Internshala</p>
@@ -29,7 +29,7 @@ const Index = ({ internship }) => {
              <img src="https://blooming-bastion-29120.herokuapp.com/static/images/page_3rd_image.png" height={200} width={200} className="ml-96"/>
              </div>
              </div>
-            </div>
+            </div> */}
             
             <div className='p-8 justify-center text-center text-4xl mt-0'>
                 <p className=' font-semibold text-gray-800'>{internship.Internship_Name} Internship At {internship.company_id ? internship.company_id.Name : 'sp'}</p>

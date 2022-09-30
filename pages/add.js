@@ -13,7 +13,7 @@ const Add = () => {
     const perksRef = useRef();
     const addInfoRef = useRef();
     const noofOpeningsRef = useRef();
-    const isLiveRef = useRef();
+    const isLiveRef = useRef();  
     const formRef = useRef();
 
     const createInternship = (e) => {

@@ -1,6 +1,19 @@
 import axios from "axios";
 import Link from "next/link";
+import { useRef } from "react";
 const letter = () =>{
+
+    const coverRef = useRef(); 
+    const assRef = useRef();
+
+   const createLetter = (e)=>{
+         e.preventDefaulit();
+         console.log(coverRef.current.value,assRef.current.value)
+         axios.post("http://localhost:5000/application/createapp",{
+            cover_letter : coverRef.current
+         })
+   }
+
     return(
         <>
        <div className="min-h-screen mx-auto max-w-screen-lg">
@@ -46,10 +59,10 @@ const letter = () =>{
        <textarea placeholder="Enter Text..." className="mt-4 p-3 text-gray-800 border rounded-md border-sky-500 hover:border-sky-600 h-44 w-[1000px] outline-none"></textarea>
        </div>
 
-       <div>
+       {/* <div>
         <p className="mt-4 text-gray-800 font-semibold">Q2. Name at least 10 keywords in Python that you use in your daily practices</p>
         <textarea placeholder="Enter Text..." className="mt-4 p-3 text-gray-800 border rounded-md border-sky-500 hover:border-sky-600 h-44 w-[1000px] outline-none"></textarea>
-       </div>
+       </div> */}
         <div className="flex justify-center mt-4 mb-8">
             <Link href="/submit">
         <button className="text-white bg-sky-500 hover:bg-sky-600 p-3 w-32 border rounded-md shadow-lg font-semibold text-lg">Submit</button>
