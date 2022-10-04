@@ -14,29 +14,11 @@ const Index = ({ internship }) => {
 
     // console.log(internship);
     return (
-        <div>
-            {/* {id} */}
-            {/* <div className='max-w-screen-lg border-sky-500 rounded-md bg-gradient-to-l bg-sky-100 h-52 ml-[440px] mt-8'>
-             <div className='flex'>
-             <div className='space-y-5 p-5'>
-                <p className='text-gray-800 font-semibold text-lg'>Upskill yourself with Internshala</p>
-                <div className='space-y-1'>
-                <p className='text-sky-600 font-semibold text-lg'>Learn Web Development</p>
-                <p className='text-sky-600 font-semibold text-lg'>Learn React js</p>
-                <p className='text-sky-600 font-semibold text-lg'>Learn Node js</p>
-                </div>
-             </div>
-             <div>
-             <img src="https://blooming-bastion-29120.herokuapp.com/static/images/page_3rd_image.png" height={200} width={200} className="ml-96"/>
-             </div>
-             </div>
-            </div> */}
-            
+        <div> 
             <div className='p-8 justify-center text-center text-4xl mt-0'>
                 <p className=' font-semibold text-gray-800'>{internship.Internship_Name} Internship At {internship.company_id ? internship.company_id.Name : 'sp'}</p>
             </div>
             <div>
-
                 <div className="max-w-screen-lg min-h-screen border rounded-lg mx-auto mb-12">
                     {/* <Internship/> */}
 
@@ -81,10 +63,8 @@ const Index = ({ internship }) => {
                                     <p className='font-semibold text-sm'>STIPEND</p>
                                 </div>
                                 <p className='text-gray-800 text-base'>{internship.Stipend}</p>
-
                             </div>
                         </div>
-
                         <div className='flex space-x-10 text-sm'>
                             <div className='bg-green-100 flex space-x-1 p-1'>
                                 <ClockIcon className='h-5 w-5 text-green-700' />
@@ -93,22 +73,15 @@ const Index = ({ internship }) => {
                             <p className='bg-gray-200 border rounded-md text-gray-700 p-1 font-semibold'>Internship</p>
                             <p className='bg-gray-200 border rounded-md text-gray-700 p-1 font-semibold'>Internship with job offer</p>
                         </div>
-                        <div className='flex text-gray-500 space-x-2'>
+                        <div className='flex text-gray-600 space-x-2'>
                             <UserGroupIcon className='h-5 w-5' />
-                            <p>315 applicants</p>
-                        <div>
-                            <BookmarkIcon className='h-5 w-5 text-sky-600 cursor-pointer'/>
+                            <p>{internship.TotalNoOfApplicants}Applicants</p>
                         </div>
-                        </div>
-                        
-
                         <hr></hr>
-
                         <div className='space-y-2'>
                             <p className='font-semibold text-gray-800 text-xl'>About {internship.company_id ? internship.company_id.Name : 'sp'}</p>
-                            <p className='text-base text-gray-500'>{ internship.company_id?.About_company}</p>
+                            <p className='text-base text-gray-600'>{ internship.company_id?.About_company}</p>
                         </div>
-
                         <div className='border rounded-md p-3 space-y-1'>
                             <div>
                                 <p className='text-gray-700 text-base font-semibold'>Activity on Internshala</p>
@@ -128,20 +101,17 @@ const Index = ({ internship }) => {
                                 </div>
                             </div>
                         </div>
-
                         <div className='space-y-2'>
                             <p className='text-gray-800 font-semibold text-xl'>
-                                About the work from home job/internship
+                                About the internship
                             </p>
                             <p className='text-gray-600 font-semibold'>Selected intern's day-to-day responsibilities include:</p>
                         </div>
                         <div className='text-gray-600 font-normal'>
 
-                            <p>1. Creating fundraising campaigns</p>
-                            <p>2. Formalizing growth strategy</p>
-                            <p>3. Working on the execution of various strategies</p>
+                            <p>{internship.About_internship}</p>
+                           
                         </div>
-
                         <div className='text-xl text-gray-800 font-semibold'>
                             <p>Who can apply</p>
                         </div>
@@ -168,8 +138,7 @@ const Index = ({ internship }) => {
                         </div>
                         <div className='space-y-2'>
                             <p className='text-xl text-gray-800 font-semibold'>Additional Information</p>
-                            <p className='text-gray-700'>Stipend structure: This is a performance-based internship. In addition to the minimum-assured stipend, you will also
-                                be paid a performance-linked incentive (10% of total funds raised).</p>
+                            <p className='text-gray-700'>{internship.Additional_information}</p> 
                         </div>
                         {/* <p className='text-gray-700'>Incentives shall be awarded to the intern based on the performance.</p> */}
 

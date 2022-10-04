@@ -18,7 +18,9 @@ const Add = () => {
 
     const createInternship = (e) => {
         e.preventDefault();
-        console.log(nameRef.current.value,locationRef.current.value,durationRef.current.value,startRef.current.value,stipendRef.current.value,skillsRef.current.value,whoRef.current.value,perksRef.current.value,addInfoRef.current.value,noofOpeningsRef.current.value,isLiveRef.current.value);
+        console.log(nameRef.current.value,locationRef.current.value,durationRef.current.value,
+            startRef.current.value,stipendRef.current.value,skillsRef.current.value,whoRef.current.value,
+            perksRef.current.value,addInfoRef.current.value,noofOpeningsRef.current.value,isLiveRef.current.value);
         axios.post('http://localhost:5000/internship/create',{
             Internship_Name : nameRef.current.value ,
             Location :  locationRef.current.value,

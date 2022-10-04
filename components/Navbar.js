@@ -31,6 +31,11 @@ const Navbar = () => {
             <Link href='/add'>
             <p className="text-white font-semibold cursor-pointer border rounded-sm w-28 px-5 py-2 text-center bg-sky-400 hover:bg-sky-500 shadow-lg hover:shadow-lg">Add</p>
            </Link>
+           <div>
+            <Link href="/applications">
+            <p className="text-sky-500 hover:text-sky-600 font-semibold text-lg cursor-pointer">My Applications</p>
+            </Link>
+           </div>
    
            {/* <Link href='/'>
             <button className="border px-5 py-2 border-sky-700 rounded-sm font-semibold text-sky-500 shadow-md hover:shadow-lg hover:text-sky-600 text-lg">Log out</button>
