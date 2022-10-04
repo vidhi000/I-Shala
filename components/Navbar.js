@@ -18,7 +18,9 @@ const Navbar = () => {
             </Link>
             {/* <Link href={'/auth'}> */}
             <div>
+               <Link href="/auth">
             <button className="px-5 py-2 bg-sky-400 hover:bg-sky-500 font-semibold text-white rounded-sm p-5 hover:shadow-lg shadow-lg text-lg">Register</button>
+            </Link>
             {/* </Link> */}
             <div className=" flex-col bg-gray-100 mt-1 p-2 w-40 hidden">
                <a href="#" className="py-1 px-2 hover:bg-sky-200 rounded">As a student</a>
@@ -30,10 +32,10 @@ const Navbar = () => {
             <p className="text-white font-semibold cursor-pointer border rounded-sm w-28 px-5 py-2 text-center bg-sky-400 hover:bg-sky-500 shadow-lg hover:shadow-lg">Add</p>
            </Link>
    
-           <Link href='/'>
+           {/* <Link href='/'>
             <button className="border px-5 py-2 border-sky-700 rounded-sm font-semibold text-sky-500 shadow-md hover:shadow-lg hover:text-sky-600 text-lg">Log out</button>
 
-            </Link>
+            </Link> */}
          </div>
       </nav>
       </div>

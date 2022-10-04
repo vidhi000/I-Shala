@@ -1,6 +1,8 @@
-import { DocumentReportIcon, QuestionMarkCircleIcon } from "@heroicons/react/outline"
+
 import axios from "axios";
 import { useEffect, useState } from "react"
+import Application from "../components/Application";
+
 
 
 
@@ -21,49 +23,47 @@ const application = () => {
 
     return (
         <>
-            <div className="min-h-screen max-w-screen-xl mx-auto">
+            <div className="min-h-screen max-w-screen-xl mx-auto ">
                 <div>
-                    <p className="text-gray-800 font-semibold text-4xl p-12 ml-72">My Applications</p>
+                    <p className="font-semibold text-4xl p-12 text-center text-gray-700">My Applications</p>
                 </div>
-                <section>
+                <section className="text-gray-600">
 
                     <div className="border border-gray-300 rounded-md shadow-xl ">
-                        <div className="grid grid-cols-9 text-gray-500 font-semibold  p-3  bg-gray-50">
+                        <div className="grid grid-cols-9 text-gray-500 font-semibold  p-3  bg-gray-100">
                             <p>COMPANY</p>
                             <p className="col-span-2">PROFILE</p>
                             <p>APPLIED ON</p>
                             <p>NUMBER OF APPLICANTS</p>
                             <p className="col-span-2">APPLICATION STATUS</p>
+                            
                             <p>REVIEW APPLICATION</p>
+                           
                         </div>
 
 
                         {
                             app.map((app,i) => (
-                                <div key={i} className="grid grid-cols-9 p-4">
-                                    <p>{app.company_id.Name}</p>
-                                    <p className="col-span-2">{app.Internship_id.Internship_Name}</p>
-                                    <p>{app.createdAt.split('T')[0]}</p>
-                                    <p>{app.Internship_id.TotalNoOfApplicants}</p>
-                                    <div className="flex space-x-1 col-span-2">
-                                        <p className="text-sky-500 bg-sky-100 font-semibold text-base border rounded-lg w-20 text-center">Applied</p>
-                                        <QuestionMarkCircleIcon className="h-6 w-6" />
-                                    </div>
-                                    <DocumentReportIcon className="h-5 w-5" />
-                                </div>
+                               <Application key={i} app={app} />
                             ))
                         }
-                        <div className="grid grid-cols-9 p-4">
-                            <p>TCS</p>
-                            <p className="col-span-2">Software Engineer</p>
-                            <p>27 sep 22022</p>
+                        {/* <div className="grid grid-cols-9 p-4 text-gray-600">
+                            <p>TCS</p> */}
+                            {/* <div className="flex">  */}
+                            {/* <p className="col-span-2">Software Engineer</p> */}
+                            {/* <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-sky-600">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                            </svg> */}
+
+                            {/* </div> */}
+                            {/* <p>27 sep 22022</p>
                             <p>38</p>
                             <div className="flex space-x-1 col-span-2">
-                                <p className="text-sky-500 bg-sky-100 font-semibold text-base border rounded-lg w-20 text-center">Applied</p>
-                                <QuestionMarkCircleIcon className="h-6 w-6" />
+                                <p className="text-sky-500 bg-sky-50 font-semibold text-base border rounded-full w-28 text-center">Applied</p>
+                                <QuestionMarkCircleIcon className="h-5 w-5 text-sky-500" />
                             </div>
-                            <DocumentReportIcon className="h-5 w-5" />
-                        </div>
+                            <DocumentReportIcon className="w-6 h-6 hover:shadow-xl text-sky-600 hover:text-sky-700 cursor-pointer" />
+                        </div> */}
                     </div>
                 </section>
             </div>

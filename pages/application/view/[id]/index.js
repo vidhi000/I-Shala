@@ -1,14 +1,55 @@
 
-import { PencilIcon } from '@heroicons/react/outline';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-const Resume = () => {
-    const router = useRouter()
-    const internshipID = router.query.id;
+import axios from "axios";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import {PencilIcon} from "@heroicons/react/outline"
+import Link from "next/link";
+
+const Review = () => {
+    const route = useRouter();
+    const id = route.query.id;
+    console.log(id)
+    const [app, setApp] = useState([])
+
+    useEffect(() => {
+        axios.get(`http://localhost:5000/application/cov/${id}`).then((res) => {
+            setApp(res.data);
+            console.log(res.data);
+        }).catch((ex) => {
+            console.log(ex)
+        })
+    }, [])
+
     return (
         <>
             <div className="min-h-screen max-w-screen-lg mx-auto">
-                <div className="border border-sky-400 rounded-md p-5 mt-7 bg-sky-50 text-sky-600">
+                <div className="border border-gray-300 rounded-md mt-14">
+                    <div className="bg-sky-100 border rounded-md border-gray-200 p-5 mt-0">
+                        <p className="text-gray-900 text-4xl font-semibold">Application</p>
+                    </div>
+
+                    <div className="p-5 space-y-3">
+                        <p className="text-gray-800 text-lg font-semibold">Cover letter</p>
+                        <p className="text-gray-700 text-base font-semibold">Why should you be hired for this role?</p>
+                        <p className="text-gray-500 font-semibold text-base">{app.cover_letter}</p>
+                    </div>
+
+                    <div className="p-5 space-y-3">
+                        <p className="text-gray-800 text-lg font-semibold">Availability</p>
+                        <p className="text-gray-500 font-semibold text-base">{app.Availability}</p>
+                    </div>
+
+                </div>
+
+
+                {/* Resume */}
+                <div className="border border-gray-300 rounded-md mt-14 mb-14">
+                    <div className="bg-sky-100 border rounded-md border-gray-200 p-5 mt-0">
+                        <p className="text-gray-900 text-4xl font-semibold">Resume</p>
+                    </div>
+                    <div className="p-8">
+                         {/* <div className="min-h-screen max-w-screen-lg mx-auto"> */}
+                {/* <div className="border border-sky-400 rounded-md p-5 mt-7 bg-sky-50 text-sky-600">
                     <p className="font-semibold">Applying to this Internship </p>
                     <div className="flex space-x-6">
                         <p>
@@ -18,12 +59,12 @@ const Resume = () => {
                         <button className="bg-sky-500 text-white shadow-lg hover:bg-sky-600 border rounded-md  w-60 font-semibold">Proceed to an Application</button>
                         </Link>
                     </div>
-                </div>
-                <div className="justify-center flex mt-10">
+                </div> */}
+                {/* <div className="justify-center flex mt-10">
                     <p className="text-gray-700 font-semibold text-2xl items-center justify-center">Resume</p>
-                </div>
+                </div> */}
 
-                <div className="border border-gray-300 rounded-md mt-6 mb-8 p-12">
+                {/* <div className="border border-gray-300 rounded-md mt-6 mb-8 p-12"> */}
                     <div className='space-y-1'>
                         <div className='flex space-x-2'>
                             <p className="text-4xl text-gray-700 font-semibold">Vidhi Rana</p>
@@ -123,9 +164,15 @@ const Resume = () => {
                 </div>
 
             </div>
+                    </div>
+                {/* </div> */}
+
+
+            {/* </div> */}
 
         </>
-    );
+    )
+
 }
 
-export default Resume
+export default Review

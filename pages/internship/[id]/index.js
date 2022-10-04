@@ -4,12 +4,13 @@ import Link from 'next/link';
 
 import React from 'react'
 import axios from 'axios';
+import { useRouter } from 'next/router';
 
 const Index = ({ internship }) => {
 
-    // const router = useRouter()
+    const router = useRouter()
 
-    // const id = router.query.id;
+    const id = router.query.id;
 
     // console.log(internship);
     return (
@@ -179,18 +180,16 @@ const Index = ({ internship }) => {
 
                         {/* <p className='bg-sky-400 text-white font-semibold border rounded-md p-3 w-32 text-lg cursor-pointer hover:bg-sky-500 shadow-lg text-center mx-auto'>Apply now</p> */}
                         <div className='flex items-center justify-center'>
-                            <Link href='/resume'>
+                            <Link href={{
+                                pathname: '/resume',
+                                query : {id}
+                            }}>
                                 <button className='bg-sky-400 text-white font-semibold border rounded-md p-3 w-32 text-lg 
                              cursor-pointer hover:bg-sky-500 shadow-lg text-center mx-auto'>Apply now</button>
                             </Link>
                         </div>
 
-
-
                     </div>
-
-
-
 
                 </div>
             </div>

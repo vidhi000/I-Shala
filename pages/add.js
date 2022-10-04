@@ -128,7 +128,7 @@ const Add = () => {
                 </div>
 
                 <div className="flex justify-center mt-10 mb-10">
-                            <button onClick={createInternship} className="text-white bg-sky-500 hover:bg-sky-600 border rounded-md px-6 p-2 shadow-lg">Create Internship</button>
+                            <button onClick={createInternship} className="text-white bg-sky-500 hover:bg-sky-600 border rounded-md px-6 p-2 shadow-lg font-semibold text-lg">Create Internship</button>
                         </div>
             </form>
         </div>
