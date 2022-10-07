@@ -15,6 +15,7 @@ const Add = () => {
     const noofOpeningsRef = useRef();
     const isLiveRef = useRef();  
     const formRef = useRef();
+    const aboutinternRef = useRef();
 
     const createInternship = (e) => {
         e.preventDefault();
@@ -33,6 +34,7 @@ const Add = () => {
             perks : perksRef.current.value,
             Additional_information : addInfoRef.current.value,
             NoOfOpening : noofOpeningsRef.current.value,
+            About_internship : aboutinternRef,
             islive : isLiveRef.current.value,
         }).then((res)=>{
                 console.log(res.data);
@@ -86,6 +88,11 @@ const Add = () => {
                             <label className="text-gray-900 font-semibold text-lg block">Required Skills</label>
                             <textarea type='text' ref={skillsRef} placeholder="Enter Skills" className="shadow-md p-[6px] outline-none border rounded-md border-gray-300 hover:border-sky-600 w-96" />
                         </div>
+                        
+                        <div className="p-2">
+                            <label className="text-gray-900 font-semibold text-lg block">About Internship</label>
+                            <textarea type='text' ref={aboutinternRef} placeholder="Enter Skills" className="shadow-md p-[6px] outline-none border rounded-md border-gray-300 hover:border-sky-600 w-96" />
+                        </div>
 
                         {/* <div className="p-2">
                 <label className="text-gray-900 font-semibold text-lg block">Learning Skills By Internshala</label>
@@ -104,6 +111,11 @@ const Add = () => {
                             <label className="text-gray-900 font-semibold text-lg block">Perks</label>
                             <textarea type='text' ref={perksRef} placeholder="Enter perks" className="shadow-md p-[6px] outline-none border rounded-md border-gray-300 hover:border-sky-600 w-96" />
                         </div>
+
+                        {/* <div className="p-2">
+                            <label className="text-gray-900 font-semibold text-lg block">About company</label>
+                            <textarea type='text'  placeholder="Enter Skills" className="shadow-md p-[6px] outline-none border rounded-md border-gray-300 hover:border-sky-600 w-96" />
+                        </div> */}
 
                         <div className="p-2">
                             <label className="text-gray-900 font-semibold text-lg block">Additional_information</label>
@@ -124,6 +136,8 @@ const Add = () => {
                             <label className="text-gray-900 font-semibold text-lg block">Islive</label>
                             <input type='text' ref={isLiveRef} placeholder="Enter Duration" className="shadow-md p-[6px] outline-none border rounded-md border-gray-300 hover:border-sky-600 w-96 " />
                         </div>
+
+                        
                        
 
                     </div>

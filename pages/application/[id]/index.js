@@ -1,19 +1,22 @@
 import axios from "axios";
 // import Link from "next/link";
+import JWT from 'jsonwebtoken'
 import { useRouter } from "next/router";
 import { useRef } from "react";
 const Letter = () => {
     const router = useRouter()
     const internshipID = router.query.id;
-    console.log(internshipID);
     const coverRef = useRef();
     const availibilityRef = useRef();
 
     const createApplication = (e) => {
         e.preventDefault();
         console.log(coverRef.current.value, availibilityRef.current.value)
+        const {id} = JWT.decode(localStorage.getItem('i_shala_token'))
+        
         axios.post("http://localhost:5000/application/createapp", {
             Internship_id: internshipID,
+            user_id : id,
             cover_letter: coverRef.current.value,
             Availability: availibilityRef.current.value
         }).then(()=>{

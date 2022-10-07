@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import React from 'react'
 import axios from 'axios';
+import JWT from 'jsonwebtoken'
 import { useRouter } from 'next/router';
 
 const Index = ({ internship }) => {
@@ -12,9 +13,23 @@ const Index = ({ internship }) => {
 
     const id = router.query.id;
 
+    const ApplyToInternship = (e) => {
+        e.preventDefault();
+        if (localStorage.getItem('i_shala_isAuth')) {
+            const {email} = JWT.decode(localStorage.getItem('i_shala_token'))
+            if(email == localStorage.getItem('i_shala_user_email')){
+                router.push(`/resume?id=${id}`)
+            }
+            else {
+                router.push('/login')
+            }
+        } else {
+            router.push('/login')
+        }
+    }
     // console.log(internship);
     return (
-        <div> 
+        <div>
             <div className='p-8 justify-center text-center text-4xl mt-0'>
                 <p className=' font-semibold text-gray-800'>{internship.Internship_Name} Internship At {internship.company_id ? internship.company_id.Name : 'sp'}</p>
             </div>
@@ -80,7 +95,7 @@ const Index = ({ internship }) => {
                         <hr></hr>
                         <div className='space-y-2'>
                             <p className='font-semibold text-gray-800 text-xl'>About {internship.company_id ? internship.company_id.Name : 'sp'}</p>
-                            <p className='text-base text-gray-600'>{ internship.company_id?.About_company}</p>
+                            <p className='text-base text-gray-600'>{internship.company_id?.About_company}</p>
                         </div>
                         <div className='border rounded-md p-3 space-y-1'>
                             <div>
@@ -110,7 +125,7 @@ const Index = ({ internship }) => {
                         <div className='text-gray-600 font-normal'>
 
                             <p>{internship.About_internship}</p>
-                           
+
                         </div>
                         <div className='text-xl text-gray-800 font-semibold'>
                             <p>Who can apply</p>
@@ -138,7 +153,7 @@ const Index = ({ internship }) => {
                         </div>
                         <div className='space-y-2'>
                             <p className='text-xl text-gray-800 font-semibold'>Additional Information</p>
-                            <p className='text-gray-700'>{internship.Additional_information}</p> 
+                            <p className='text-gray-700'>{internship.Additional_information}</p>
                         </div>
                         {/* <p className='text-gray-700'>Incentives shall be awarded to the intern based on the performance.</p> */}
 
@@ -149,13 +164,13 @@ const Index = ({ internship }) => {
 
                         {/* <p className='bg-sky-400 text-white font-semibold border rounded-md p-3 w-32 text-lg cursor-pointer hover:bg-sky-500 shadow-lg text-center mx-auto'>Apply now</p> */}
                         <div className='flex items-center justify-center'>
-                            <Link href={{
+                            {/* <Link href={{
                                 pathname: '/resume',
                                 query : {id}
-                            }}>
-                                <button className='bg-sky-400 text-white font-semibold border rounded-md p-3 w-32 text-lg 
+                            }}> */}
+                            <button onClick={ApplyToInternship} className='bg-sky-400 text-white font-semibold border rounded-md p-3 w-32 text-lg 
                              cursor-pointer hover:bg-sky-500 shadow-lg text-center mx-auto'>Apply now</button>
-                            </Link>
+                            {/* </Link> */}
                         </div>
 
                     </div>

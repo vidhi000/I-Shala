@@ -6,8 +6,9 @@ import 'react-responsive-carousel/lib/styles//carousel.min.css'
 const bannerUrl =[
   'https://raw.githubusercontent.com/SrikanthReddyBV/Internshala/master/src/public/images/get_set_intern_2021-1920-5bb08e.png',
   'https://raw.githubusercontent.com/SrikanthReddyBV/Internshala/master/src/public/images/learn_with_me-1920-5da5b0.png',
-  'int.PNG',
+  'image.PNG',
   'banner.PNG',
+  'int.PNG',
   'https://raw.githubusercontent.com/SrikanthReddyBV/Internshala/master/src/public/images/social_issue_camapign_jul21-1920-b70cf7.png',
   // 'https://raw.githubusercontent.com/SrikanthReddyBV/Internshala/master/src/public/images/page_3rd_image.png',
   'https://raw.githubusercontent.com/SrikanthReddyBV/Internshala/master/src/public/images/year_specific_21-1920-d0c72f.png',
