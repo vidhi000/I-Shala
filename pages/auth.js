@@ -3,9 +3,15 @@ import { useRouter } from "next/router";
 import { useRef, useState } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useRecoilState } from "recoil";
+import { loginState } from "../atom/loginAtom";
 toast.configure();
 
+
+
 const Auth = () => {
+
+    const [isLogin, setIsLogin] = useRecoilState(loginState)
 
     const emailRef = useRef();
     const passwordRef = useRef();
@@ -44,6 +50,7 @@ const Auth = () => {
             email: LemailRef.current.value,
             password: LpasswordRef.current.value
         }).then((res) => {
+            setIsLogin(true)
             localStorage.setItem('i_shala_token',res.data.token);
             localStorage.setItem('i_shala_user_email',res.data.email)
             localStorage.setItem('i_shala_user_fname',res.data.Fname)
@@ -67,8 +74,9 @@ const Auth = () => {
     return (
         <>
 
-            <form className="min-h-screen relative bg-[url('/public/inter.PNG')]" ref={formRef}
-                style={{ backgroundImage: "url('https://internshala.com/static/images/registration/student/background-1920.png')", backgroundRepeat: "no-repeat" }}
+            <form className="min-h-screen relative " ref={formRef}
+                style={{ backgroundImage: "url('backg.jpg')",
+                 backgroundRepeat: "no-repeat" , backgroundSize : "1500px"}}
             >
 
 
@@ -99,7 +107,7 @@ const Auth = () => {
                     {
                         loginSignup ?
 
-                            <div className="border rounded-sm min-w-[400px] max-w-md space-y-5 p-10 shadow-xl text-gray-600 bg-gray-50 ml-24">
+                            <div className="border rounded-sm min-w-[400px] max-w-md space-y-3 p-8 shadow-xl text-gray-600 bg-gray-50 ml-24">
                                 <div className="flex space-x-2 border rounded-sm max-w-full items-center justify-center bg-white">
                                     <img src="https://internshala.com/static/images/login/google_logo.png " />
                                     <p className="font-semibold justify-center items-center cursor-pointer p-2">Sign Up With Google</p>

@@ -4,10 +4,15 @@ import { useRouter } from "next/router";
 import { useRef } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useRecoilState } from "recoil";
+import { loginState } from "../atom/loginAtom";
 toast.configure();
 
 
-const login = () =>{
+
+const Login = () =>{
+    const [isLogin, setIsLogin] = useRecoilState(loginState)
+     
     const LemailRef = useRef();
     const LpasswordRef = useRef();
     const formRef = useRef();
@@ -18,6 +23,7 @@ const login = () =>{
             email: LemailRef.current.value,
             password: LpasswordRef.current.value
         }).then((res) => {
+            setIsLogin(true)
             localStorage.setItem('i_shala_token',res.data.token);
             localStorage.setItem('i_shala_user_email',res.data.email)
             localStorage.setItem('i_shala_user_fname',res.data.Fname)
@@ -35,7 +41,7 @@ const login = () =>{
    return(
      
     <div className="min-h-screen relative bg-[url('/public/inter.PNG')] "
-    style={{ backgroundImage: "url('https://internshala.com/static/images/registration/student/background-1920.png')", backgroundRepeat: "no-repeat" }}
+    style={{ backgroundImage: "url('backg.jpg')", backgroundRepeat: "no-repeat",backgroundSize:"1600px"}}
 >
 
      <div className="max-w-screen-2xl mx-auto p-10 flex justify-around">
@@ -104,7 +110,7 @@ const login = () =>{
    );
 }
 
-export default login
+export default Login
 
 
 

@@ -62,7 +62,7 @@ const internships = () => {
                     </div>
                     <p className="text-sky-500 hover:text-sky-600 font-semibold text-right cursor-pointer">Clear all</p>
                 </div>
-                <section className="ml-10 space-y-5">
+                <section className="ml-10 space-y-5 mx-auto">
                     {
                         intern.map((i,_j)=>(
                             <Internship key={_j} i={i}/>
