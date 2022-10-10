@@ -63,18 +63,15 @@ const Navbar = () => {
                <a href="#" className="py-1 px-2 hover:bg-sky-200 rounded">As a student</a>
                <a href="#" className="py-1 px-2 hover:bg-sky-200 rounded">As an Employee</a>
             </div> */}
-          <div>
+          {/* <div>
             <Link href="/applications">
               <p className="text-gray-500 hover:text-sky-500 font-semibold text-base cursor-pointer">My Applications</p>
             </Link>
-          </div>
-
-
+          </div> */}
           <Link href='/add'>
             <p className="font-semibold cursor-pointer  w-28 px-5 py-2 text-center
              bg-white hover:bg-sky-400 text-gray-500 hover:text-white  shadow-lg  border rounded-md">Add</p>
           </Link>
-
           {/* <UserCircleIcon className="w-7 h-7 text-gray-700 hover:text-sky-500 cursor-pointer"/> */}
           {/* <div className="relative w-full lg:max-w-sm p-3 ">
             <select className="w-full p-2 text-gray-500 space-y-3  bg-white border rounded-md shadow-sm outline-none
@@ -118,8 +115,8 @@ const Navbar = () => {
                             <a
                               href="#"
                               className={classNames(
-                                active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                                'block px-4 py-2 text-base hover:text-sky-500'
+                                active ? ' text-gray-900' : 'text-gray-700',
+                                'block px-4 py-2 text-base hover:text-sky-500 hover:bg-gray-50'
                               )}
                             >
                               Register as a student
@@ -134,7 +131,7 @@ const Navbar = () => {
                               href="#"
                               className={classNames(
                                 active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                                'block px-4 py-2 text-base hover:text-sky-500'
+                                'block px-4 py-2 text-base hover:text-sky-500 hover:bg-gray-50'
                               )}
                             >
                               Register as an employer
@@ -149,7 +146,7 @@ const Navbar = () => {
                               href="#"
                               className={classNames(
                                 active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                                'block px-4 py-2 text-base hover:text-sky-500'
+                                'block px-4 py-2 text-base hover:text-sky-500 hover:bg-gray-50'
                               )}
                             >
                               Login
@@ -209,8 +206,8 @@ const Navbar = () => {
                             <a
                               href="#"
                               className={classNames(
-                                active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                                'block px-4 py-2 text-base hover:text-sky-500'
+                                active ? ' text-gray-900':'text-gray-700',
+                                'block px-4 py-2 text-base'
                               )}
                             >{
                                 <div>
@@ -237,7 +234,7 @@ const Navbar = () => {
                               href="#"
                               className={classNames(
                                 active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                                'block px-4 py-2 text-base hover:text-sky-500'
+                                'block px-4 py-2 text-base hover:text-sky-500 hover:bg-gray-50'
                               )}
                             >
                               My Applications
@@ -252,7 +249,7 @@ const Navbar = () => {
                               href="#"
                               className={classNames(
                                 active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                                'block px-4 py-2 text-base hover:text-sky-500'
+                                'block px-4 py-2 text-base hover:text-sky-500 hover:bg-gray-50'
                               )}
                             >
                               Resume
@@ -267,7 +264,7 @@ const Navbar = () => {
                               href="#" 
                               className={classNames(
                                 active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                                'block px-4 py-2 text-base hover:text-sky-500' ,
+                                'block px-4 py-2 text-base hover:text-sky-500 hover:bg-gray-50' ,
                               )} onClick={Logout}
                                             >
                               Log out
