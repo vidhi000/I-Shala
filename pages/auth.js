@@ -146,7 +146,7 @@ const Auth = () => {
                                     
                                 </div>
                                 <div className="flex justify-center">
-                                    <p>Already registered?<span className="p-2 font-semibold text-sky-500 cursor-pointer hover:text-sky-600  bg-gray-50" onClick={() => setLoginSignup(false)}>Login</span></p>
+                                    <p>Already registered?<span className="p-2 font-semibold text-sky-500 cursor-pointer hover:text-sky-600" onClick={() => setLoginSignup(false)}>Login</span></p>
                                 </div>
                             </div>
 

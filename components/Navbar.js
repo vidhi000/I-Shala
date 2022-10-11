@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/outline'
+import { ChevronDownIcon, UserCircleIcon } from '@heroicons/react/outline'
 import { Fragment, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useRecoilState } from "recoil";
@@ -181,9 +181,7 @@ const Navbar = () => {
               <Menu as="div" className="relative inline-block text-left">
                 <div>
                   <Menu.Button className="inline-flex w-full justify-center items-center text-gray-700 hover:text-sky-500 font-semibold text-lg p-2">
-                    {
-                      localStorage.getItem("i_shala_user_fname")
-                    }
+                    <UserCircleIcon className="h-7 w-7 text-gray-500 hover:text-sky-500"/>
                     <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
                   </Menu.Button>
                 </div>
