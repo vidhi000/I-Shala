@@ -35,7 +35,7 @@ const Organization_details = () => {
                         <input type="text" className="outline-none hover:border-sky-500 border border-gray-300 rounded-md block p-[6px] w-full"></input>
                     </div>
                     <div className="flex space-x-2 mt-3">
-                        <input type="checkbox" className="h-4 w-4 mt-1"></input>
+                        <input type="checkbox" className="h-4 w-4 mt-1 cursor-pointer"></input>
                         <p className="text-gray-600 ">I am an independent practitioner (freelancer, architect, lawyer etc.) posting for self</p>
                     </div>
 

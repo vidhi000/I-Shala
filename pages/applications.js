@@ -24,7 +24,7 @@ const application = () => {
 
     return (
         <>
-            <div className="min-h-screen max-w-screen-xl mx-auto ">
+            <div className="min-h-screen max-w-screen-xl mx-auto">
                 <div>
                     <p className="font-semibold text-4xl p-12 text-center text-gray-700">My Applications</p>
                 </div>
