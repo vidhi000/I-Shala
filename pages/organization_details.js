@@ -1,7 +1,21 @@
 
 import { DocumentDuplicateIcon, DocumentTextIcon, UsersIcon } from "@heroicons/react/outline"
 import Link from "next/link";
-const Organization_details = () => {
+import { useRef } from "react";
+import { useRouter } from "next/router";
+import axios from "axios";
+
+
+const createOrgDetail = () => {
+    const orgnameRef = useRef();
+    const orgdetailRef = useRef();
+    const urlRef = useRef()
+} 
+
+
+
+const Organization_details = (e) => {
+  
     return (
         <>
             <div className="min-h-screen max-w-4xl mx-auto relative">
