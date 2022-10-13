@@ -1,4 +1,4 @@
-import { BookmarkIcon, CalendarIcon, ClipboardCheckIcon, ClockIcon, CurrencyRupeeIcon, HomeIcon, LocationMarkerIcon, PlayIcon, TrendingUpIcon, UserGroupIcon, UsersIcon } from '@heroicons/react/outline';
+import {CalendarIcon, ClipboardCheckIcon, ClockIcon, CurrencyRupeeIcon, HomeIcon, LocationMarkerIcon, PlayIcon, TrendingUpIcon, UserGroupIcon, UsersIcon } from '@heroicons/react/outline';
 // import { useRouter } from 'next/router';
 import Link from 'next/link';
 
@@ -90,12 +90,12 @@ const Index = ({ internship }) => {
                         </div>
                         <div className='flex text-gray-600 space-x-2'>
                             <UserGroupIcon className='h-5 w-5' />
-                            <p>{internship.TotalNoOfApplicants}Applicants</p>
+                            <p className='text-gray-500 font-semibold'>{internship.TotalNoOfApplicants}Applicants</p>
                         </div>
                         <hr></hr>
                         <div className='space-y-2'>
                             <p className='font-semibold text-gray-800 text-xl'>About {internship.company_id ? internship.company_id.Name : 'sp'}</p>
-                            <p className='text-base text-gray-600'>{internship.company_id?.About_company}</p>
+                            <p className='text-base text-gray-500 font-semibold'>{internship.company_id?.About_company}</p>
                         </div>
                         <div className='border rounded-md p-3 space-y-1'>
                             <div>
@@ -124,26 +124,31 @@ const Index = ({ internship }) => {
                         </div>
                         <div className='text-gray-600 font-normal'>
 
-                            <p>{internship.About_internship}</p>
+                            <p className='text-gray-500 font-semibold'>{internship.About_internship}</p>
 
+                        </div>
+                        <div>
+                            <p className='text-gray-800 font-semibold text-xl'>Skills Required</p>
+                            <p className='text-gray-500 text-base font-semibold'>{internship.RequiredSkills}</p>
                         </div>
                         <div className='text-xl text-gray-800 font-semibold'>
                             <p>Who can apply</p>
+                            <p className='text-gray-500 text-base'>{internship.whocanapply}</p>
                         </div>
-                        <div className='text-gray-600 '>
+                        <div >
                             {/* <p>Only those candidates can apply who:</p>
                             <p>1. are available for the work from home job/internship</p>
                             <p>2. can start the work from home job/internship between 8th Sep'22 and 13th Oct'22</p>
                             <p>3. are available for duration of 1 week</p>
                             <p>4. have relevant skills and interests</p> */}
-                            <p>{internship.whocanapply}</p>
+                           
                         </div>
 
                         <div className='space-y-1'>
                             <p className='text-xl text-gray-800 font-semibold'>
                                 Perks
                             </p>
-                            <div className='flex space-x-10 text-gray-700'>
+                            <div className='flex space-x-10 text-gray-500 font-semibold'>
                                 {/* <p className='border rounded-md bg-gray-100 p-1 outline-none'>Certificate</p>
                                 <p className='border rounded-md bg-gray-100 p-1'>Letter of recommendation</p>
                                 <p className='border rounded-md bg-gray-100 p-1'>Flexible work hours</p> */}
@@ -153,13 +158,13 @@ const Index = ({ internship }) => {
                         </div>
                         <div className='space-y-2'>
                             <p className='text-xl text-gray-800 font-semibold'>Additional Information</p>
-                            <p className='text-gray-700'>{internship.Additional_information}</p>
+                            <p className='text-gray-500 font-semibold'>{internship.Additional_information}</p>
                         </div>
                         {/* <p className='text-gray-700'>Incentives shall be awarded to the intern based on the performance.</p> */}
 
                         <div>
                             <p className='text-xl text-gray-800 font-semibold'>Number of openings</p>
-                            <p>{internship.NoOfOpening}</p>
+                            <p className='font-semibold text-gray-500'>{internship.NoOfOpening}</p>
                         </div>
 
                         {/* <p className='bg-sky-400 text-white font-semibold border rounded-md p-3 w-32 text-lg cursor-pointer hover:bg-sky-500 shadow-lg text-center mx-auto'>Apply now</p> */}

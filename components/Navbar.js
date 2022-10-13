@@ -50,9 +50,10 @@ const Navbar = () => {
           <Link href="/internships">
             <p className="font-semibold cursor-pointer text-gray-500 hover:text-sky-500 text-base">Internships</p>
           </Link>
-          {/* <Link href='/login'>
-            <button className="border px-5 py-2 border-sky-700 rounded-sm font-semibold text-sky-500 shadow-md hover:shadow-lg text-lg">Login</button>
-            </Link> */}
+            <Link href='/login'>
+            <button
+             className="border w-24 p-1 border-sky-700 rounded-sm font-semibold text-sky-500 shadow-md hover:shadow-lg text-lg">Login</button>
+            </Link>
           {/* <Link href={'/auth'}> */}
 
           {/* <Link href="/auth">
@@ -91,8 +92,9 @@ const Navbar = () => {
 
               <Menu as="div" className="relative inline-block text-left">
                 <div>
-                  <Menu.Button className="inline-flex w-full justify-center items-center text-gray-700 hover:text-sky-500 font-semibold text-lg p-2">
-                    Login/Register
+                  <Menu.Button className="inline-flex w-32 justify-center items-center text-white bg-sky-500 hover:bg-sky-600
+                  font-semibold text-lg p-2 border rounded-md shadow-lg">
+                    Register
                     <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
                   </Menu.Button>
                 </div>
@@ -126,7 +128,7 @@ const Navbar = () => {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <Link href="/auth">
+                          <Link href="/registration/employer">
                             <a
                               href="#"
                               className={classNames(
@@ -139,7 +141,7 @@ const Navbar = () => {
                           </Link>
                         )}
                       </Menu.Item>
-                      <Menu.Item>
+                      {/* <Menu.Item>
                         {({ active }) => (
                           <Link href="/login">
                             <a
@@ -153,7 +155,7 @@ const Navbar = () => {
                             </a>
                           </Link>
                         )}
-                      </Menu.Item>
+                      </Menu.Item> */}
                       <form method="POST" action="#">
                         {/* <Menu.Item>
                 {({ active }) => (
@@ -277,13 +279,7 @@ const Navbar = () => {
               </Menu>
 
 
-          }
-
-
-
-
-
-
+                              }
 
         </div>
       </nav>
