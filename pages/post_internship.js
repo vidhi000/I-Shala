@@ -1,9 +1,9 @@
-import { DocumentDuplicateIcon, DocumentTextIcon, UsersIcon,ArrowRightIcon } from "@heroicons/react/outline"
+import { DocumentDuplicateIcon, DocumentTextIcon, UsersIcon, ArrowRightIcon } from "@heroicons/react/outline"
 import Link from "next/link"
-import {useState} from "react"
+import { useState } from "react"
 
 const post_internship = () => {
-    const [model,setModel] = useState()
+    const [model, setModel] = useState()
     return (
         <>
             <div className="min-h-screen max-w-4xl mx-auto relative justify-center">
@@ -73,14 +73,28 @@ const post_internship = () => {
 
                 </div>
 
+                <p className="text-lg font-semibold text-gray-700 ml-40 mt-10">Stipend and Perks</p>
+                <div className="border rounded-md border-gray-300 max-w-xl mx-auto mt-2 mb-5 p-5 space-y-3">
+                    <div className="space-y-1">
+                        <label>Stipend</label>
+                        <input type="text" className="outline-none border border-gray-300 rounded-md p-2 block hover:border-sky-500 w-full" />
+                    </div>
+                   
+                    <div className="space-y-1">
+                    <p >Perks</p>
+                    <textarea type="text" className="border rounded-md
+                      border-gray-300 hover:border-sky-500 outline-none block w-full h-16 p-2" />
+                    </div>
+                </div>
+
                 {/* stipend */}
-                <p className="text-lg font-semibold text-gray-700 ml-40 mt-10">Stipend & perks</p>
+                <p className="text-lg font-semibold text-gray-700 ml-40 mt-10">SKills</p>
                 <div className="border rounded-md border-gray-300 max-w-xl mx-auto mt-2 mb-5">
                     <div className="p-5 space-y-1">
-                  <p>Skills required</p>
-                  <textarea type="text" placeholder="e.g. Javascript , Java" className="border rounded-md
+                        <p>Skills required</p>
+                        <textarea type="text" placeholder="e.g. Javascript , Java" className="border rounded-md
                  border-gray-300 hover:border-sky-500 outline-none block w-full h-16 p-2" />
-                 </div>
+                    </div>
                 </div>
 
                 {/* cover */}
@@ -98,13 +112,13 @@ const post_internship = () => {
                 </div>
                 </div> */}
                 <Link href="/internship_created">
-            {/* <button onClick={()=>{setModel(true) }}  */}
-            <button className="text-white mb-10 shadow-lg bg-sky-500 ml-[350px] hover:bg-sky-600 font-semibold text-lg text-center p-2 w-40 
+                    {/* <button onClick={()=>{setModel(true) }}  */}
+                    <button className="text-white mb-10 shadow-lg bg-sky-500 ml-[350px] hover:bg-sky-600 font-semibold text-lg text-center p-2 w-40 
             border rounded-md mt-6">
-            Post internship</button>
-            </Link>
+                        Post internship</button>
+                </Link>
 
-{/* 
+                {/* 
             {
                 model ? (
                     <>
@@ -141,7 +155,7 @@ const post_internship = () => {
  */}
 
 
-            {/* </Link> */}
+                {/* </Link> */}
             </div>
         </>
     )

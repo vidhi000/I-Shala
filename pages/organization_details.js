@@ -2,20 +2,26 @@
 import { DocumentDuplicateIcon, DocumentTextIcon, UsersIcon } from "@heroicons/react/outline"
 import Link from "next/link";
 import { useRef } from "react";
-import { useRouter } from "next/router";
+import Router, { useRouter } from "next/router";
 import axios from "axios";
 
-
-const createOrgDetail = () => {
+const Organization_details = () => {
     const orgnameRef = useRef();
     const orgdetailRef = useRef();
-    const urlRef = useRef()
-} 
+    const urlRef = useRef();
 
-
-
-const Organization_details = (e) => {
-  
+     const orgDetail = (e)=>{
+       e.preventDefault();
+       console.log(orgnameRef.current.value,orgdetailRef.current.value,urlRef.current.value)
+       axios.post("http://localhost:5000/orgdetail/org",{
+        Organization_name : orgnameRef.current.value,
+        Organization_description : orgdetailRef.current.value,
+        website_URL : urlRef.current.value
+       }).then((res)=>{
+          console.log(res.data)
+       })
+       Router.push("/post_internship")
+     }
     return (
         <>
             <div className="min-h-screen max-w-4xl mx-auto relative">
@@ -46,7 +52,7 @@ const Organization_details = (e) => {
                 <div className=" border border-gray-300 rounded-md mt-5 p-7 max-w-3xl mx-auto">
                     <div className="space-y-1">
                         <label className="font-semibold text-gray-700">Organization name</label>
-                        <input type="text" className="outline-none hover:border-sky-500 border border-gray-300 rounded-md block p-[6px] w-full"></input>
+                        <input type="text" ref={orgnameRef} className="outline-none hover:border-sky-500 border border-gray-300 rounded-md block p-[6px] w-full"></input>
                     </div>
                     <div className="flex space-x-2 mt-3">
                         <input type="checkbox" className="h-4 w-4 mt-1 cursor-pointer"></input>
@@ -55,8 +61,8 @@ const Organization_details = (e) => {
 
                     <div className="mt-3 space-y-1">
                         <p className="text-gray-700 font-semibold">Organization description</p>
-                        <textarea className="outline-none hover:border-sky-500 border rounded-md
-                         border-gray-300 w-full p-10"></textarea>
+                        <textarea ref={orgdetailRef} className="outline-none hover:border-sky-500 border rounded-md
+                         border-gray-300 w-full p-5"></textarea>
                     </div>
                 </div>
                 <div className="p-12">
@@ -69,7 +75,7 @@ const Organization_details = (e) => {
                         <p className="text-gray-600 p-1 font-semibold">Verify using your active & functional website</p>
                         <div className="space-y-1 p-2">
                             <p className="text-gray-700 font-semibold">Enter website URL</p>
-                            <input type="text" className="outline-none hover:border-sky-500 border border-gray-300 rounded-md p-[6px] w-full"></input>
+                            <input ref={urlRef} type="text" className="outline-none hover:border-sky-500 border border-gray-300 rounded-md p-[6px] w-full"></input>
                         </div>
 
                     </div>
@@ -78,7 +84,7 @@ const Organization_details = (e) => {
                 <div className="flex flex-col items-center">
                 <Link href="/post_internship">
                     <button className="text-white bg-sky-500 hover:bg-sky-600 
-                shadow-lg font-semibold text-lg text-center w-32 border rounded-md mt-4 mb-10 p-2 ">Next</button>
+                shadow-lg font-semibold text-lg text-center w-32 border rounded-md mt-4 mb-10 p-2" onClick={orgDetail}>Next</button>
                 </Link>
                 </div>
             </div>

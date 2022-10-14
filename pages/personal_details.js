@@ -12,7 +12,7 @@ const Personal_details = () => {
   const LnameRef = useRef();
   const ContactRef = useRef();
   
-//   const formRef = useRef();
+  const formRef = useRef();
 
   const userDetail = (e) => {
     e.preventDefault();
@@ -25,6 +25,7 @@ const Personal_details = () => {
        }).then((res)=>{
             console.log(res.data)
        }) 
+    //    formRef.current.reset()
      route.push("/organization_details")
   }
     return (
