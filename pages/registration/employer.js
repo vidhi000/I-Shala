@@ -16,7 +16,7 @@ const employer = () => {
     const fnameRef = useRef();
     const lnameRef = useRef();
     const contactRef = useRef();
-    const formRef = useRef();
+    const formRef = useRef();  
     const route = useRouter()
 
     const userReg = (e) => {
@@ -33,6 +33,7 @@ const employer = () => {
         }).then((res) => {
             console.log(res.data)
             toast("Signup Successfull", { autoClose: 1500, position: "bottom-right" })
+            route.push("/login")
             // setLoginSignup(false)
         })
 
